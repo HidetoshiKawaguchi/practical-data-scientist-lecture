@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "class04"
+version = "0.1.0"
+description = ""
+authors = ["Hidetoshi Kawaguchi <Hidetoshi.Kawaguchi@ibm.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.18.1"
+flake8 = "^7.3.0"
+black = "^25.9.0"
+isort = "^6.0.1"
+pytest = "^8.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 79  # PEP8準拠
+
+[tool.isort]
+profile = "black" # Blackと衝突しないように
+line_length = 79  # PEP8準拠
